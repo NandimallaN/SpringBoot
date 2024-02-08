@@ -1,0 +1,7 @@
+package com.excelon.repo;
+
+
+
+public class TicketRepo extends JpaRe{
+
+}

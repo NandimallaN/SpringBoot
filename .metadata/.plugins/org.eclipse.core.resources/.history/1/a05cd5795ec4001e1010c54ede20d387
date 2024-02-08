@@ -1,0 +1,22 @@
+package com.excelon.rest;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.excelon.binding.Book;
+
+@RestController
+public class BookRestController {
+
+	@GetMapping(value = "/book/{id}", produces = { "application/xml", "application/json" })
+	public ResponseEntity<Book> getBook(@PathVariable("id") Integer id) {
+
+		Book b = new Book(1, "Java", 200.00);
+		return new ResponseEntity<>(b, HttpStatus.OK);
+	}
+
+}
+

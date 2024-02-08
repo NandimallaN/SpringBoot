@@ -1,0 +1,28 @@
+package com.excelon.service;
+
+import java.util.List;
+
+import com.excelon.entities.Ticket;
+import com.excelon.request.Passenger;
+
+public class TicketServiceImpl implements TicketService{
+
+	@Override
+	public Ticket bookTicket(Passenger passenger) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Ticket getTicket(Integer ticketnum) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Ticket> getATickets() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

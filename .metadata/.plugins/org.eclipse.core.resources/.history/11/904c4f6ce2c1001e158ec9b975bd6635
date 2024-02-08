@@ -1,0 +1,32 @@
+package com.excelon.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class UserController {
+	
+	// Path
+	@GetMapping("/user")
+	public ModelAndView getUserName() {
+		ModelAndView mav = new ModelAndView();
+
+		// set data to model
+		mav.addObject("data", "Ashok");
+
+		// set view name
+		mav.setViewName("index");
+
+		return mav;
+	}
+	
+	@GetMapping("/email")
+	public String getUserEmail(Model model)
+	{
+		model.addAttribute("data", "ashokitschool@gmail.com");
+		return "index";
+	}
+
+}

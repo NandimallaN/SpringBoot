@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;Day7-Spring-Rest-API-MMT-RestTemplate&apos; to &apos;Day8-Spring-Rest-API-MMT-RestTemplate&apos;&#x0D;&#x0A;- Original element: &apos;Day7-Spring-Rest-API-MMT-RestTemplate&apos;&#x0D;&#x0A;- Renamed element: &apos;Day7-Spring-Rest-API-MMT-RestTemplate&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;Day7-Spring-Rest-API-MMT-RestTemplate&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=Day7-Spring-Rest-API-MMT-RestTemplate" name="Day8-Spring-Rest-API-MMT-RestTemplate" references="true" stamp="1707320650335" version="1.0"/>
+</session>

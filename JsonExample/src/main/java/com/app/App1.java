@@ -1,0 +1,24 @@
+package com.app;
+
+import com.google.gson.Gson;
+
+
+public class App1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		convertObjToJson();
+		
+	}
+
+	
+	
+	   public static void convertObjToJson()
+	   {
+		   Gson gson = new Gson();
+
+		   User user=new User(101, "Ramana", "Male", 983726383L);
+		   String json = gson.toJson(user); 
+		   System.out.println(json);
+	   }
+}

@@ -1,0 +1,49 @@
+package com.excelon.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.excelon.entities.Ticket;
+import com.excelon.repo.TicketRepo;
+import com.excelon.request.Passenger;
+
+
+@Service
+public class TicketServiceImpl implements TicketService{
+	
+	@Autowired
+	private TicketRepo repo;
+
+	@Override
+	public Ticket bookTicket(Passenger passenger) {
+		
+		Ticket ticket=new Ticket();
+		BeanUtils.copyProperties(passenger, ticket);
+		
+		ticket.setPrice(2000);
+		ticket.setTicketstatus("Conformed");
+		
+		ticket=repo.save(ticket);
+		return null;
+	}
+
+	@Override
+	public Ticket getTicket(Integer ticketnum) {
+		Optional<Ticket> findById=repo.findById(ticketnum);
+		
+		if(findById.isPresent())
+			return findById.get();
+		return null;
+	}
+
+	@Override
+	public List<Ticket> getAllTickets() {
+		
+		return repo.findAll();
+	}
+
+}

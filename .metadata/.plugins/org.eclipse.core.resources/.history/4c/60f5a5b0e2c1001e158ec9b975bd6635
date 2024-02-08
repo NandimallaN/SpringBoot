@@ -1,0 +1,13 @@
+<html xmlns:th="https://www.thymeleaf.org">
+
+<html>
+	<head>
+		<title> Excelond Home page</title>
+	</head>
+	<body>
+		<h1> Employee Details</h1>
+		<p th:text="${emp1.empid}"></p>
+		<p th:text="${emp1.empname}"></p>
+		<p th:text="${emp1.salary}"></p>
+	</body>
+</html>

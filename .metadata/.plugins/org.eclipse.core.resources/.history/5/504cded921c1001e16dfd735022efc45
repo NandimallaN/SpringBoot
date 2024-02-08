@@ -1,0 +1,5 @@
+package com.excelon.repo;
+
+public interface AddrRepo {
+
+}

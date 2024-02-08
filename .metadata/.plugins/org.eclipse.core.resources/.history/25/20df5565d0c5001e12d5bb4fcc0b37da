@@ -1,0 +1,5 @@
+package com.excelon.request;
+
+public class Passenger {
+
+}

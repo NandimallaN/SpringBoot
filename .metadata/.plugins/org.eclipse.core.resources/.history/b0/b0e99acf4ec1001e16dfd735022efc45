@@ -1,0 +1,13 @@
+<html xmlns:th="https://www.thymeleaf.org">
+
+<html>
+	<head>
+		<title> Excelond Home page</title>
+	</head>
+	<body>
+		<h1> Book Details </h1>
+		<p th:text="${id}"></p>
+		<p th:text="${name}"></p>
+		<p th:text="${price}"></p>
+	</body>
+</html>

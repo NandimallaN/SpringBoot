@@ -1,0 +1,36 @@
+package com.excelon;
+
+import java.time.LocalDate;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.excelon.entities.Passport;
+import com.excelon.entities.Person;
+import com.excelon.repo.PersonRepo;
+
+@Service
+public class PersonService {
+	
+	@Autowired
+	private PersonRepo personRepo;
+
+	public void saveData() {
+
+		Person person = new Person();
+		person.setPersonname("Ashok");
+		person.setPersongender("Male");
+
+		Passport passport = new Passport();
+		passport.setPassportno("KM797979");
+		passport.setIssuedate(LocalDate.now());
+		passport.setExpdate(LocalDate.now().plusYears(10));
+
+		// One to one mapping
+		person.setPassport(passport);
+		passport.setPerson(person);
+
+		personRepo.save(person);
+	}
+
+}

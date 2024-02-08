@@ -1,0 +1,41 @@
+package com.excelon.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.excelon.request.Passenger;
+import com.excelon.response.Ticket;
+import com.excelon.service.MakeMytripService;
+
+@Controller
+public class MakeMytripController {
+	@Autowired
+    private MakeMytripService service;
+	
+	@GetMapping("/")
+	public String index(Model model)
+	{
+		model.addAttribute("passenger",new Passenger());
+		return "index";
+	}
+	
+	@GetMapping("/search")
+	public String search(Model model)
+	{
+		model.addAttribute("ticket",new Ticket());
+		return "search";
+	}
+	
+	@PostMapping("/ticket")
+	public String handledBookTicketBtn(Passenger passenger, Model model)
+	{
+		Ticket ticket=service.bookTicket(passenger);
+		model.addAttribute("ticket",ticket);
+		return "view-ticket";
+	}
+	
+	
+}
